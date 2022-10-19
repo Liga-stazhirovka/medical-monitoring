@@ -26,6 +26,8 @@ public class MessageServiceImpl implements MessageService {
                 break;
             case ERROR:
                 producer.sendToErrorQueue(mapper.toProducer(message));
+            default:
+                System.out.println("Status: '" + status + "' not found!");
         }
     }
 }
