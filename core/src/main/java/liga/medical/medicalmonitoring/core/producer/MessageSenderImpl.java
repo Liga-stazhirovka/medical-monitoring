@@ -24,14 +24,14 @@ public class MessageSenderImpl implements MessageSender {
 
     @Override
     public void sendToAlertQueue(MessageProducer messageProducer) {
-        template.convertAndSend(DAILY_QUEUE, messageProducer);
+        template.convertAndSend(ALERT_QUEUE, messageProducer);
         System.out.printf("Message send to queue: %s \nMessage: %s\n", ALERT_QUEUE,
                 messageProducer.getMessage());
     }
 
     @Override
     public void sendToErrorQueue(MessageProducer messageProducer) {
-        template.convertAndSend(DAILY_QUEUE, messageProducer);
+        template.convertAndSend(ERROR_QUEUE, messageProducer);
         System.out.printf("Message send to queue: %s \nMessage: %s\n", ERROR_QUEUE,
                 messageProducer.getMessage());
     }
