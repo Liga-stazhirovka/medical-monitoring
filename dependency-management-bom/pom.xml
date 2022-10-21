@@ -52,22 +52,22 @@
             </dependency>
             <dependency>
                 <groupId>liga.medical</groupId>
-                <artifactId>monitoring-core-api</artifactId>
+                <artifactId>medical-monitoring-core-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>liga.medical</groupId>
-                <artifactId>monitoring-dto</artifactId>
+                <artifactId>medical-monitoring-dto</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>liga.medical</groupId>
-                <artifactId>monitoring-utils</artifactId>
+                <artifactId>medical-monitoring-utils</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>liga.medical</groupId>
-                <artifactId>monitoring-core</artifactId>
+                <artifactId>medical-monitoring-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -107,6 +107,7 @@
                 <artifactId>spring-context</artifactId>
                 <version>${spring.context.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
