@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: localhost
+    password: guest
+    username: guest
+    port: 15672
+    queue: common_monitoring
+    alert_queue: alert_queue
+    daily_queue: daily_queue
+    error_queue: error_queue
+    exchange: my_exchange
+    routingkey_alert: ALERT
+    routingkey_daily: DAILY
+    routingkey_error: ERROR

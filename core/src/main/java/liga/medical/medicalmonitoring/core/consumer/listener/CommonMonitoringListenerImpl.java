@@ -8,8 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import static liga.medical.medicalmonitoring.core.config.RabbitConfiguration.QUEUE_NAME;
-
 @Component
 @RequiredArgsConstructor
 public class CommonMonitoringListenerImpl implements CommonMonitoringListener {
@@ -17,7 +15,7 @@ public class CommonMonitoringListenerImpl implements CommonMonitoringListener {
     private final MessageMapper mapper;
 
     @Override
-    @RabbitListener(queues = QUEUE_NAME)
+    @RabbitListener(queues = "${spring.rabbitmq.queue}")
     public void listenCommonMonitoring(MessageConsumer messageConsumer) {
         messageService.routing(mapper.toDto(messageConsumer));
     }
